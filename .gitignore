@@ -1,0 +1,5 @@
+.build
+/Code-TidyAll-Plugin-UniqueLines*
+local/
+*.swp
+.tidyall.d/

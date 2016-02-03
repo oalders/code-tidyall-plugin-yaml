@@ -1,0 +1,22 @@
+SYNOPSIS
+
+       In configuration:
+    
+       [YAML]
+       select = **/*.yaml
+       Indent = 4
+
+DESCRIPTION
+
+    Uses YAML to format YAML files. Has the same defaults as YAML.pm
+
+CONFIGURATION
+
+    ascii
+
+      Escape non-ASCII characters. The output file will be valid ASCII.
+
+SEE ALSO
+
+    Code::TidyAll
+

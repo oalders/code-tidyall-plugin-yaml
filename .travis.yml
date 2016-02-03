@@ -1,0 +1,17 @@
+---
+language: perl
+notifications:
+  email:
+    on_failure: always
+    on_success: always
+    recipients:
+      - olaf@wundersolutions.com
+perl:
+  - 5.22
+  - 5.20
+  - 5.18
+  - 5.16
+  - 5.14
+script:
+  - prove -lr t
+sudo: false
