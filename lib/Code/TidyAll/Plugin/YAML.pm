@@ -23,12 +23,14 @@ sub transform_source {
     my $self   = shift;
     my $source = shift;
 
+    no strict 'refs';
     foreach my $attr ( @attributes ) {
         my $predicate = '_has_' . $attr;
         if ( $self->$predicate ) {
-            $YAML::{$attr} = $self->$attr;
+            *{"YAML::$attr"} = \($self->$attr);
         }
     }
+    use strict 'refs';
 
     return Dump( Load( $source ) );
 }
@@ -55,16 +57,41 @@ Uses L<YAML> to format YAML files.  Has the same defaults as YAML.pm
 
 =head1 CONFIGURATION
 
+The following configuration options can be set.  See L<YAML> for a full
+description of each option.
+
 =over
 
-=item ascii
+=item AnchorPrefix
 
-Escape non-ASCII characters. The output file will be valid ASCII.
+=item CompressSeries
+
+=item DumpCode
+
+=item Indent
+
+=item QuoteNumericStrings
+
+=item SortKeys
+
+=item Stringify
+
+=item UseAliases
+
+=item UseBlock
+
+=item UseCode
+
+=item UseFold
+
+=item UseHeader
+
+=item UseVersion
 
 =back
 
 =head1 SEE ALSO
 
-L<Code::TidyAll>
+L<Code::TidyAll>, L<YAML>
 
 =cut
