@@ -11,4 +11,4 @@ select = cpanfile
 
 [YAML]
 select = .travis.yml
-Indent = 11 
+Indent = 2
