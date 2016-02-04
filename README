@@ -12,11 +12,36 @@ DESCRIPTION
 
 CONFIGURATION
 
-    ascii
+    The following configuration options can be set. See YAML for a full
+    description of each option.
 
-      Escape non-ASCII characters. The output file will be valid ASCII.
+    AnchorPrefix
+
+    CompressSeries
+
+    DumpCode
+
+    Indent
+
+    QuoteNumericStrings
+
+    SortKeys
+
+    Stringify
+
+    UseAliases
+
+    UseBlock
+
+    UseCode
+
+    UseFold
+
+    UseHeader
+
+    UseVersion
 
 SEE ALSO
 
-    Code::TidyAll
+    Code::TidyAll, YAML
 
